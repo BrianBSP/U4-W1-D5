@@ -4,10 +4,14 @@ public abstract class ElementoMultimediale {
     //attributi
     private String titolo;
 
+
+    // costruttore
     public ElementoMultimediale(String titolo) {
         this.titolo = titolo;
     }
 
+    // metodi
+    // getter & setter
     public String getTitolo() {
         return titolo;
     }
@@ -16,12 +20,9 @@ public abstract class ElementoMultimediale {
         this.titolo = titolo;
     }
 
-    @Override
-    public String toString() {
-        return "----ElementoMultimediale----\n{" +
-                "titolo='" + titolo + '\'' +
-                '}';
-    }
+    public abstract void esegui();
+
+    
 }
 
 

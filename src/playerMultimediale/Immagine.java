@@ -5,8 +5,9 @@ public class Immagine extends ElementoMultimediale {
     private int luminosita;
 
     // costruttore
-    public Immagine(String titolo) {
+    public Immagine(String titolo, int luminosita) {
         super(titolo);
+        this.luminosita = luminosita;
     }
 
     // metodi
@@ -18,12 +19,20 @@ public class Immagine extends ElementoMultimediale {
         luminosita--;
     }
 
-    @Override
-    public String toString() {
-        return "----Immagine-----\n{" +
-                "titolo" + getTitolo() +
-                "luminosita=" + luminosita +
-                '}';
+    public void show() {
+        System.out.println(getTitolo() + " " + "*".repeat(luminosita));
     }
 
+    @Override
+    public void esegui() {
+        show();
+    }
+
+    @Override
+    public String toString() {
+        return "----Immagine: -----\n{" +
+                "titolo= " + getTitolo() +
+                "\nluminosita= " + luminosita +
+                '}';
+    }
 }

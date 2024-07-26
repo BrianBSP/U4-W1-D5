@@ -10,19 +10,11 @@ public class Audio extends ElementoMultimediale implements Riproducibile {
         super(titolo);
     }
 
-    public int getVolume() {
-        return volume;
-    }
-
     @Override
-    public void alzaVolume() {
+    public void esegui() {
 
     }
 
-    @Override
-    public void abbassaVolume() {
-
-    }
 
     @Override
     public void play() {

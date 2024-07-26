@@ -9,16 +9,11 @@ public class Video extends ElementoMultimediale implements Riproducibile {
         super(titolo);
     }
 
-
     @Override
-    public void alzaVolume() {
+    public void esegui() {
 
     }
 
-    @Override
-    public void abbassaVolume() {
-
-    }
 
     @Override
     public void play() {
