@@ -21,11 +21,7 @@ public class Immagine extends ElementoMultimediale implements Guardabile {
         luminosita--;
     }
 
-    // creata interfaccia Guardabile (non serviva ma ho voluto fare una cosa in più)
-    /*public void show() {
-        System.out.println(getTitolo() + " " + "*".repeat(luminosita));
-    }*/
-
+    // overrides
     @Override
     public void esegui() {
         show();

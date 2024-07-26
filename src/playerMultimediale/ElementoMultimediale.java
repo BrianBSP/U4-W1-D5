@@ -20,9 +20,9 @@ public abstract class ElementoMultimediale {
         this.titolo = titolo;
     }
 
+    // metodo astratto
     public abstract void esegui();
 
-    
 }
 
 

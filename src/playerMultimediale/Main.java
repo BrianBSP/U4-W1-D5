@@ -37,19 +37,57 @@ public class Main {
         // array
         Scanner scanner = new Scanner(System.in);
         ElementoMultimediale[] elementi = new ElementoMultimediale[5];
-       /* elementi[0] = new Immagine("FotoMatrimonio", 4);
+       /*elementi[0] = new Immagine("FotoMatrimonio", 4);
         elementi[1] = new Immagine("FotoMatrimonio", 4);
         elementi[2] = new Audio("CanzoneRedHotChilliPeppers", 4, 8);
         elementi[3] = new Video("VideoCresima", 3, 5, 7);
         elementi[4] = new Video("VideoComunione", 4, 6, 2);*/
 
-        // array 
+        // array implementato da tastiera utilizzando un for
+        for (int i = 0; i < elementi.length; i++) {
+
+            System.out.println("Inserisci il tipo di elemento multimediale:\n 1. Immagine,\n 2. Audio,\n 3. Video");
+            String tipoElemento = scanner.nextLine();
+
+            switch (tipoElemento) {
+                case "Immagine":
+                    System.out.println("Inserisci il titolo: ");
+                    String titoloImmagine = scanner.nextLine();
+                    System.out.println("Inserisci luminosità: ");
+                    int luminositaImmagine = Integer.parseInt(scanner.nextLine());
+                    elementi[i] = new Immagine(titoloImmagine, luminositaImmagine);
+                    break;
+                case "Audio":
+                    System.out.println("Inserisci il titolo: ");
+                    String titoloAudio = scanner.nextLine();
+                    System.out.println("Inserisci la durata: ");
+                    int durataAudio = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci il volume: ");
+                    int volumeAudio = Integer.parseInt(scanner.nextLine());
+                    elementi[i] = new Audio(titoloAudio, durataAudio, volumeAudio);
+                    break;
+                case "Video":
+                    System.out.println("Inserisci il titolo: ");
+                    String titoloVideo = scanner.nextLine();
+                    System.out.println("Inserisci luminosità: ");
+                    int luminositaVideo = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci la durata: ");
+                    int durataVideo = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Inserisci il volume: ");
+                    int volumeVideo = Integer.parseInt(scanner.nextLine());
+                    elementi[i] = new Video(titoloVideo, durataVideo, volumeVideo, luminositaVideo);
+                    break;
+                default:
+                    System.out.println("Tipo di File Multimediale NON VALIDO.\nScegli meglio tra:\n- Immagine;\n- Audio;\n- Video.");
+            }
+
+        }
 
         while (true) {
             System.out.println("Scegli quale elemento dell'array vuoi eseguire:\n-Scegli elemento da 1 a 5\n-premi 0 per uscire.");
             int elementoDaEseguire = Integer.parseInt(scanner.nextLine());
             if (elementoDaEseguire == 0) {
-                System.out.println("Hai spento l'applicazione");
+                System.out.println("Hai spento l'applicazione!\nCiao ciao!!!👋🏻👋🏻");
                 break;
             } else if (elementoDaEseguire >= 1 && elementoDaEseguire <= 5) {
                 elementi[elementoDaEseguire - 1].esegui();
@@ -57,15 +95,6 @@ public class Main {
                 System.out.println("Scegli meglio... ci sono solo 5 elementi nel player multimediale.");
             }
         }
-
-
-        /*for (int i = 0; i < elementi.length; i++) {
-            System.out.println("Inserisci il tipo di elemento multimediale:\n 1. Immagine,\n 2. Registrazione Audio,\n 3. Video");
-            String tipoElemento = scanner.nextLine();
-            System.out.println("Inserisci il titolo: ");
-            String titolo = scanner.nextLine();
-
-        }*/
 
 
     }

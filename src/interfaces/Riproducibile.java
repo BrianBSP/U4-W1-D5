@@ -2,5 +2,5 @@ package interfaces;
 
 public interface Riproducibile {
 
-    void play();
+    public void play();
 }

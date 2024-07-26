@@ -2,5 +2,5 @@ package interfaces;
 
 public interface Guardabile {
 
-    void show();
+    public void show();
 }

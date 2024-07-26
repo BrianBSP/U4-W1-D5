@@ -24,6 +24,16 @@ public class Audio extends ElementoMultimediale implements Riproducibile {
         volume--;
     }
 
+    // getter
+    public int getDurata() {
+        return durata;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    // overrides
     @Override
     public void esegui() {
         play();
