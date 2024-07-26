@@ -1,23 +1,47 @@
 package playerMultimediale;
 
+import interfaces.Riproducibile;
+
 public class Audio extends ElementoMultimediale implements Riproducibile {
-
-    //attributi
-
+    // attributi
+    private int durata;
+    private int volume;
 
     // costruttori
-    public Audio(String titolo) {
+    public Audio(String titolo, int durata, int volume) {
         super(titolo);
+        this.volume = volume;
+        this.durata = durata;
+
+    }
+
+    // metodi
+    public void alzaVolume() {
+        volume++;
+    }
+
+    public void abbassaVolume() {
+        volume--;
     }
 
     @Override
     public void esegui() {
-
+        play();
     }
-
 
     @Override
     public void play() {
+        for (int i = 0; i < durata; i++) {
+            System.out.println(getTitolo() + " " + "!".repeat(volume));
+        }
+    }
 
+    @Override
+    public String toString() {
+        return "----Audio: ----\n{" +
+                "titolo= " + getTitolo() +
+                "\ndurata= " + durata +
+                ", \nvolume= " + volume +
+                '}';
     }
 }

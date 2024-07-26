@@ -1,6 +1,8 @@
 package playerMultimediale;
 
-public class Immagine extends ElementoMultimediale {
+import interfaces.Guardabile;
+
+public class Immagine extends ElementoMultimediale implements Guardabile {
     // attributi
     private int luminosita;
 
@@ -19,9 +21,10 @@ public class Immagine extends ElementoMultimediale {
         luminosita--;
     }
 
-    public void show() {
+    // creata interfaccia Guardabile (non serviva ma ho voluto fare una cosa in più)
+    /*public void show() {
         System.out.println(getTitolo() + " " + "*".repeat(luminosita));
-    }
+    }*/
 
     @Override
     public void esegui() {
@@ -34,5 +37,10 @@ public class Immagine extends ElementoMultimediale {
                 "titolo= " + getTitolo() +
                 "\nluminosita= " + luminosita +
                 '}';
+    }
+
+    @Override
+    public void show() {
+        System.out.println(getTitolo() + " " + "*".repeat(luminosita));
     }
 }

@@ -1,9 +1,6 @@
-package playerMultimediale;
+package interfaces;
 
 public interface Riproducibile {
 
-
     void play();
-
-
 }
