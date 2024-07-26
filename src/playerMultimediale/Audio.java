@@ -1,6 +1,7 @@
 package playerMultimediale;
 
 public class Audio extends ElementoMultimediale implements Riproducibile {
+
     //attributi
 
 
@@ -9,6 +10,19 @@ public class Audio extends ElementoMultimediale implements Riproducibile {
         super(titolo);
     }
 
+    public int getVolume() {
+        return volume;
+    }
+
+    @Override
+    public void alzaVolume() {
+
+    }
+
+    @Override
+    public void abbassaVolume() {
+
+    }
 
     @Override
     public void play() {

@@ -11,6 +11,16 @@ public class Video extends ElementoMultimediale implements Riproducibile {
 
 
     @Override
+    public void alzaVolume() {
+
+    }
+
+    @Override
+    public void abbassaVolume() {
+
+    }
+
+    @Override
     public void play() {
 
     }
